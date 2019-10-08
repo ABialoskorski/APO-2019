@@ -1,2 +1,1 @@
-# APO-2019
-Analiza i Projektowanie Obiektowe
+Wiktor Bałaban, Artur Białoskórski, Łukasz Kubiak
