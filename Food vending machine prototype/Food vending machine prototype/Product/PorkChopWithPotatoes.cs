@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Food_vending_machine_prototype.Payment;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Food_vending_machine_prototype.Product
 {
-    class PorkChopWithPotatoes : IProduct, IPreparable
+    class PorkChopWithPotatoes : IProduct, IPreparable, IPayable
     {
         private bool prepared = false;
         public void Give()
@@ -30,6 +31,10 @@ namespace Food_vending_machine_prototype.Product
                 return false;
             }
                 
+        }
+        public float GetPrize()
+        {
+            return 13.0f;
         }
     }
 }

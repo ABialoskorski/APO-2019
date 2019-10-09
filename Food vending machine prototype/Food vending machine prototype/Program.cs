@@ -1,4 +1,5 @@
 ﻿using Food_vending_machine_prototype.Ingredient;
+using Food_vending_machine_prototype.Payment;
 using Food_vending_machine_prototype.TakeOrder;
 using System;
 using System.Collections.Generic;
@@ -20,14 +21,27 @@ namespace Food_vending_machine_prototype
                 new PorkChop(),
             });
             TakeOrderAsNumber takeOrderAsNumber = new TakeOrderAsNumber();
+            CashPayment cashPayment = new CashPayment();
+            CardPayment cardPayment = new CardPayment();
             while (true)
             {
                 IProduct chosenProduct = takeOrderAsNumber.ChooseProduct();
-                if (chosenProduct as IPreparable != null)
+
+                Console.WriteLine("Płatność gotówką wpisz 1, płatność kartą wpisz 2");
+                int paymentType = Convert.ToInt32(Console.ReadLine());
+                IPayment payment = paymentType == 1 ? cashPayment as IPayment : cardPayment as IPayment;
+                bool paymentResult = payment.Pay(chosenProduct as IPayable);
+                if (paymentResult)
                 {
-                    (chosenProduct as IPreparable).Prepare(ingredientContainer);
+                    if (chosenProduct as IPreparable != null)
+                    {
+                        (chosenProduct as IPreparable).Prepare(ingredientContainer);
+                    }
+                    chosenProduct.Give();
+                } else
+                {
+                    Console.WriteLine("Zła kwota");
                 }
-                chosenProduct.Give();
             }
         }
     }

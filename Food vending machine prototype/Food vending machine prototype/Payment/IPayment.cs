@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Food_vending_machine_prototype.Payment;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,6 @@ namespace Food_vending_machine_prototype
 {
     interface IPayment
     {
-        bool Pay();
+        bool Pay(IPayable payable);
     }
 }
