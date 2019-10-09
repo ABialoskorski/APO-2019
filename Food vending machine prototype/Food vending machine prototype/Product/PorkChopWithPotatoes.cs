@@ -6,15 +6,27 @@ namespace Food_vending_machine_prototype.Product
 {
     class PorkChopWithPotatoes : IProduct, IPreparable
     {
+        private bool prepared = false;
         public void Give()
         {
-            Console.WriteLine("Proszę, oto schabowy z ziemniakami.");
+            if(prepared)
+                Console.WriteLine("Proszę, oto schabowy z ziemniakami.");
         }
 
-        public bool Prepare()
+        public bool Prepare(IIngredientContainer ingredientContainer)
         {
-            throw new NotImplementedException();
-            Console.WriteLine("*** Przygotowywanie posiłku ***");
+            bool potato = ingredientContainer.RemoveIngredient(new Ingredient.Potato());
+            bool porkchop = ingredientContainer.RemoveIngredient(new Ingredient.PorkChop());
+            if (potato && porkchop)
+            {
+                Console.WriteLine("*** Przygotowywanie posiłku ***");
+                prepared = true;
+                return true;
+            } else
+            {
+                return false;
+            }
+                
         }
     }
 }

@@ -6,6 +6,6 @@ namespace Food_vending_machine_prototype
 {
     interface IPreparable
     {
-        bool Prepare();
+        bool Prepare(IIngredientContainer ingredientContainer);
     }
 }

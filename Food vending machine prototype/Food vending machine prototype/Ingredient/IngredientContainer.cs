@@ -8,12 +8,12 @@ namespace Food_vending_machine_prototype.Ingredient
     {
         readonly List<IIngredient> ingredients = new List<IIngredient>();
 
-        void IIngredientContainer.Load(List<IIngredient> ingredients)
+        public void Load(List<IIngredient> ingredients)
         {
             this.ingredients.AddRange(ingredients);
         }
 
-        bool IIngredientContainer.RemoveIngredient(IIngredient ingredient)
+        public bool RemoveIngredient(IIngredient ingredient)
         {
             foreach(IIngredient i in ingredients)
             {
