@@ -10,7 +10,10 @@ namespace Food_vending_machine_prototype.Product
         public void Give()
         {
             if(prepared)
+            {
+                prepared = false;
                 Console.WriteLine("Proszę, oto schabowy z ziemniakami.");
+            }
         }
 
         public bool Prepare(IIngredientContainer ingredientContainer)
