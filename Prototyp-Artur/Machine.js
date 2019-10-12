@@ -1,6 +1,6 @@
 var readline = require("readline");
 
-var prompts = readline.createInterface(process.stdin, process.stdout);
+var rl = readline.createInterface(process.stdin, process.stdout);
 
 const Products = [
 	{
@@ -44,11 +44,12 @@ const Products = [
 let Choose = () => {
 	console.log("Lista dostępnych produktów:");
 	console.log(Products);
-	prompts.question("Wybierz produkt po numerze id: ", number => {
+	rl.question("Wybierz produkt po numerze id: ", number => {
 		if (number == 0) {
 			console.log(
 				`Wybrano ${Products[0].nazwa} cena wynosi ${Products[0].cena} zł.`
 			);
+			readline.close();
 		}
 		if (number == 1) {
 			console.log(
@@ -78,8 +79,8 @@ let Choose = () => {
 				`Wybrano ${Products[5].nazwa} cena wynosi ${Products[5].cena} zł.`
 			);
 		}
-		let Pay = () => {
-			prompts.question(
+		rl.on("close", () => {
+			rl.question(
 				`Wybierz sposób płatności:
             1) karta  
             2) gotówka
@@ -93,8 +94,7 @@ let Choose = () => {
 					}
 				}
 			);
-		};
-		process.exit();
+		});
 	});
 };
 
