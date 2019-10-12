@@ -37,13 +37,13 @@ const Products = [
 		id: 4,
 		nazwa: "10 Czekoladek",
 		cena: 6,
-		ilosc: 600,
+		ilosc: 0,
 	},
 	{
 		id: 5,
 		nazwa: "Coca-Cola",
 		cena: 3,
-		ilosc: 16,
+		ilosc: 1,
 	},
 ];
 
@@ -51,6 +51,20 @@ let Choose = () => {
 	console.log("Lista dostępnych produktów:");
 	console.log(Products);
 	rl.question("Wybierz produkt po numerze id: ", number => {
+		if (Products[number].ilosc <= 0) {
+			console.log(
+				"Brak zapasów tego produktu, wysłano zgłoszenie do magazynu"
+			);
+			process.exit();
+		}
+		let leftAmount = Products[number].ilosc - 1;
+
+		if (leftAmount <= 0) {
+			console.log(
+				"Twój produkt jest ostatnim tego typu, brawo szczęśliwcu, wysłaliśmy zgłoszenie po kolejne zapasy"
+			);
+		}
+
 		choosedOne.id = number;
 		choosedOne.nazwa = Products[number].nazwa;
 		choosedOne.cena = Products[number].cena;
@@ -58,6 +72,11 @@ let Choose = () => {
 		console.log(
 			`Wybrano ${choosedOne.nazwa}, cena wynosi ${choosedOne.cena}zł`
 		);
+		if (choosedOne.id == Products[3].id) {
+			console.log(
+				"Wybrano ciepły posiłek, automat przywołuje obsługę serwisową"
+			);
+		}
 
 		rl.question(
 			`Wybierz sposób płatności: karta lub gotówka

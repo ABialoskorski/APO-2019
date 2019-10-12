@@ -2,6 +2,12 @@ var readline = require("readline");
 
 var rl = readline.createInterface(process.stdin, process.stdout);
 
+const choosedOne = {
+	id: 15,
+	nazwa: "",
+	cena: 0,
+};
+
 const Products = [
 	{
 		id: 0,
@@ -31,13 +37,13 @@ const Products = [
 		id: 4,
 		nazwa: "10 Czekoladek",
 		cena: 6,
-		ilosc: 600,
+		ilosc: 0,
 	},
 	{
 		id: 5,
 		nazwa: "Coca-Cola",
 		cena: 3,
-		ilosc: 16,
+		ilosc: 1,
 	},
 ];
 
@@ -45,56 +51,48 @@ let Choose = () => {
 	console.log("Lista dostępnych produktów:");
 	console.log(Products);
 	rl.question("Wybierz produkt po numerze id: ", number => {
-		if (number == 0) {
+		if (Products[number].ilosc <= 0) {
 			console.log(
-				`Wybrano ${Products[0].nazwa} cena wynosi ${Products[0].cena} zł.`
+				"Brak zapasów tego produktu, wysłano zgłoszenie do magazynu"
 			);
-			readline.close();
+			process.exit();
 		}
-		if (number == 1) {
+		let leftAmount = Products[number].ilosc - 1;
+
+		if (leftAmount <= 0) {
 			console.log(
-				`Wybrano ${Products[1].nazwa} cena wynosi ${Products[1].cena} zł.`
-			);
-		}
-		if (number == 2) {
-			console.log(
-				`Wybrano ${Products[2].nazwa} cena wynosi ${Products[2].cena} zł.`
+				"Twój produkt jest ostatnim tego typu, brawo szczęśliwcu, wysłaliśmy zgłoszenie po kolejne zapasy"
 			);
 		}
-		if (number == 3) {
-			console.log(
-				`Wybrano ${Products[3].nazwa} cena wynosi ${Products[3].cena} zł.`
-			);
+
+		choosedOne.id = number;
+		choosedOne.nazwa = Products[number].nazwa;
+		choosedOne.cena = Products[number].cena;
+
+		console.log(
+			`Wybrano ${choosedOne.nazwa}, cena wynosi ${choosedOne.cena}zł`
+		);
+		if (choosedOne.id == Products[3].id) {
 			console.log(
 				"Wybrano ciepły posiłek, automat przywołuje obsługę serwisową"
 			);
 		}
-		if (number == 4) {
-			console.log(
-				`Wybrano ${Products[4].nazwa} cena wynosi ${Products[4].cena} zł.`
-			);
-		}
-		if (number == 5) {
-			console.log(
-				`Wybrano ${Products[5].nazwa} cena wynosi ${Products[5].cena} zł.`
-			);
-		}
-		rl.on("close", () => {
-			rl.question(
-				`Wybierz sposób płatności:
-            1) karta  
-            2) gotówka
-            `,
-				payment => {
-					if (payment == 1) {
-						console.log(`Wybrano płatność kartą`);
-					}
-					if (payment == 2) {
-						console.log(`Wybrano płatność gotówką`);
-					}
+
+		rl.question(
+			`Wybierz sposób płatności: karta lub gotówka
+        `,
+			payment => {
+				if (payment == "karta") {
+					console.log(
+						`Wybrano płatność kartą, do zapłaty: ${choosedOne.cena}zł`
+					);
+				} else if (payment == "gotowka") {
+					console.log(
+						`Wybrano płatność gotówką, do zapłaty: ${choosedOne.cena}zł`
+					);
 				}
-			);
-		});
+			}
+		);
 	});
 };
 
