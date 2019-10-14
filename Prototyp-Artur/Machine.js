@@ -54,12 +54,18 @@ let Choose = () => {
 		`
     Wybierz produkt po numerze id: `,
 		number => {
+			if (number > 5) {
+				console.log("Brak takiego produktu");
+				process.exit();
+			}
+
 			if (Products[number].ilosc <= 0) {
 				console.log(
 					"Brak zapasów tego produktu, wysłano zgłoszenie do magazynu"
 				);
 				process.exit();
 			}
+
 			let leftAmount = Products[number].ilosc - 1;
 
 			if (leftAmount <= 0) {
