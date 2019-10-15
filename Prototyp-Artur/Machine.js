@@ -93,16 +93,32 @@ let Choose = () => {
 				payment => {
 					if (payment == "karta") {
 						console.log(
-							`Wybrano płatność kartą, do zapłaty: ${choosedOne.cena}zł`
+							`Wybrano płatność kartą, do zapłaty: ${choosedOne.cena}zł
+							Proszę przyłoyć kartę`
 						);
+						setTimeout(() => {
+							console.log(`Produkt jest gotowy, do zobaczenia`);
+						}, 2000);
 					} else if (payment == "gotowka") {
 						console.log(
 							`Wybrano płatność gotówką, do zapłaty: ${choosedOne.cena}zł`
 						);
+						rl.question(
+							`Ile masz pieniędzy?
+						`,
+							money => {
+								console.log(
+									"reszta wynosi: " +
+										(money - choosedOne.cena)
+								);
+								setTimeout(() => {
+									console.log(
+										`Produkt jest gotowy, do zobaczenia`
+									);
+								}, 2000);
+							}
+						);
 					}
-					setTimeout(() => {
-						console.log(`Produkt jest gotowy, do zobaczenia`);
-					}, 2000);
 				}
 			);
 		}
