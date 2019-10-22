@@ -22,15 +22,14 @@ Hasło       Opis
 ----------- -----------------------------
 Dostawca                  Dostawca to podmiot zajmujący się uzupełnianiem towarów w automacie
 Komunikator automatu      Urządzenie wysyłające powiadomienia do odpowiednich podmiotów
-Hasło1      Opis hasła    
 
 Przypadki użycia
 ----------------
 
 ### Use case 1: Uzupełnienie brakujących produktów
 
-Dostawca dokonywuje uwierzytelnienia.
-Dostawca Przełącza automat w tryb serwisowy i wprowadza hasło dostawcy.
+Dostawca otwiera automat.
+Dostawca Przełącza automat w tryb serwisowy.
 Dostawca uzupełnia brakujące towary.
 Dostawca zamyka automat i wyłącza tryb serwisowy.
 
@@ -63,7 +62,7 @@ Automat wydaje resztę lub pokwitowanie z banku.
 ### Use case 6: Przeprowadzenie przeglądu maszyny
 
 Serwisant dokonywuje uwierzytelnienia.
-Serwisant przełącza automat w tryb serwisowy i wprowadza hasło serwisowe.
+Serwisant przełącza automat w tryb serwisowy.
 Serwisant testuje częsci mechaniczne automatu.
 Serwisant zamyka automat.
 Serwisant wyłącza tryb serwisowy.
