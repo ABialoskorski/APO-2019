@@ -1,31 +1,30 @@
 # Automat Spożywczy
-
 ## Wiktor Bałaban, Artur Białoskórski, Łukasz Kubiak
 
-# Opis skrócony przypadków użycia
+Opis skrócony przypadków użycia
+===============================
 
-## Aktorzy procesu i ich cele
+Aktorzy procesu i ich cele
+--------------------------
 
-Aktor Cel
+Aktor                   Cel 
+----------- -----------------------------
+Dostawca                Dodanie brakujących produktów
+Klient                  Kupno produktu
+Serwisant               Przeprowadza przegląd maszyny
+Komunikator automatu    Powiadomienie dostawcy
+Komunikator automatu    Powiadomienie serwisanta
 
----
+Słownik
+-------
 
-Dostawca Dodanie brakujących produktów
-Klient Kupno produktu
-Serwisant Przeprowadza przegląd maszyny
-Komunikator automatu Powiadomienie dostawcy
-Komunikator automatu Powiadomienie serwisanta
+Hasło       Opis
+----------- -----------------------------
+Dostawca                  Dostawca to podmiot zajmujący się uzupełnianiem towarów w automacie
+Komunikator automatu      Urządzenie wysyłające powiadomienia do odpowiednich podmiotów
 
-## Słownik
-
-Hasło Opis
-
----
-
-Dostawca Dostawca to podmiot zajmujący się uzupełnianiem towarów w automacie
-Komunikator automatu Urządzenie wysyłające powiadomienia do odpowiednich podmiotów
-
-## Przypadki użycia
+Przypadki użycia
+----------------
 
 ### Use case 1: Uzupełnienie brakujących produktów
 
