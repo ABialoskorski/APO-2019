@@ -30,8 +30,10 @@ Przypadki użycia
 
 Dostawca otwiera automat.
 Dostawca Przełącza automat w tryb serwisowy.
+Automat wyświetla stan przejścia automatu w tryb serwisowy.
 Dostawca uzupełnia brakujące towary.
 Dostawca zamyka automat i wyłącza tryb serwisowy.
+Automat przełącza się w stan sprzedaży.
 
 ### Use case 2: Powiadomienie o braku towaru
 
@@ -52,9 +54,9 @@ Automat wydaje resztę lub pokwitowanie z banku.
 ### Use case 5: Kupno przygotowywanego produktu
 
 Klient wybiera przygotowywany produkt.
+Automat przygotowuje produkt.
 Klient wybiera metodę płatności.
 Klient realizuje płatność za pomocą karty lub gotówki
-Automat przygotowuje produkt.
 Automat wyświetla pozostały czas do przygotowania produktu.
 Automat wydaje produkt.
 Automat wydaje resztę lub pokwitowanie z banku.
