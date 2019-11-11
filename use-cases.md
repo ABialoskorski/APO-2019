@@ -19,6 +19,8 @@ Hasło       Opis
 ----------- -----------------------------
 Dostawca                  Dostawca to podmiot zajmujący się uzupełnianiem towarów w automacie
 Komunikator automatu      Urządzenie wysyłające powiadomienia do odpowiednich podmiotów
+Ekran                     Ekran musi wyświetlać minimum 3 cyfry w wielkości i kontraście który widoczny
+                          jest dla przeciętnej osoby z odległości 50 cm.
 
 Przypadki użycia
 ----------------
@@ -58,9 +60,15 @@ Automat wydaje resztę lub pokwitowanie z banku.
 
 ### Use case 6: Przeprowadzenie przeglądu maszyny
 
-Serwisant dokonywuje uwierzytelnienia.
+Serwisant dokonuje uwierzytelnienia.
+Automat otwiera się.
 Serwisant przełącza automat w tryb serwisowy.
-Serwisant testuje częsci mechaniczne automatu.
+Automat potwierdza przełączenie się w stan serwisowy
+Serwisant testuje część mechaniczną automatu.
+Automat przekazuje informacje o ewentualnych ustarkach.
+Serwisant zapisuje w raporcie ewentualne usterki
+Serwisant potwierdza w systemie "zaliczenie" danej części mechanicznej
+Automat potwierdza pomyślne zakończenie serwisu.
 Serwisant zamyka automat.
-Serwisant wyłącza tryb serwisowy.
+Automat wyłącza tryb serwisowy.
 Serwisant wysyła raport.
