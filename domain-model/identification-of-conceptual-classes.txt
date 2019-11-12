@@ -1,0 +1,58 @@
+obiekty fizyczne: automat, monety, banknoty, ekran, produkt, karta płatnicza,
+klawiatura, terminal płatniczy, komunikator automatu, zamek, podgrzewacz 
+produktów
+
+
+Systemy, opisy rzeczy: urządzenie do rozpoznawania monet i banknotów,
+pojemnik do wydawania produktów - klient może odebrać produkt
+
+
+Miejsca: Magazyn, Serwis, Stanowisko automatu
+
+
+Transakcje: kupno
+
+
+Pozycje transakcji: produkt gotowy, produkt do przygotowania
+
+
+Role ludzi: Serwisant, Dostawca, Klient
+
+
+Kontenery innych rzeczy: Podajnik, pojemnik na produkty wymagające przygotowania,
+pojemnik na monety, pojemnik na banknoty, pojemnik na resztę (bilon)
+
+
+Systemy informacyjne: system autoryzacji płatności, system raportów serwisowych
+system odbioru powiadomień od Komunikatora automatu
+
+
+Koncepty abstrakcyjne: 
+
+
+Oranizacje: Serwis, Dostawa
+
+
+Zdarzenia: wybór produktu, płatność, kupno, wydanie reszty, wydanie produktu gotowego,
+wydawanie produktu do przygotowania, odrzucenie karty,
+
+
+Procesy: kupnoProduktu, 
+
+
+Reguły: reguła przyjmowania banknotów, 
+
+
+Katalogi: Katalog produktów, 
+
+
+Wyniki czynności finansowych: paragony
+
+
+Instrumenty finansowe i usługi: 
+
+
+Podręcznik, dokumenty, książki: Instrukcja obsługi dla uzytkownika, instrukcja serwisowa,
+inkstrukcja dla dostawcy 
+
+

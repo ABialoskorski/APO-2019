@@ -21,6 +21,12 @@ Dostawca                  Dostawca to podmiot zajmujący się uzupełnianiem tow
 Komunikator automatu      Urządzenie wysyłające powiadomienia do odpowiednich podmiotów
 Ekran                     Ekran musi wyświetlać minimum 3 cyfry w wielkości i kontraście który widoczny
                           jest dla przeciętnej osoby z odległości 50 cm.
+Podajnik:                 Urządzenie do wydawania gotowycj produktów. W jednym
+                          podajniku jest jeden rodzaj produktu.
+Pojemnik na monety:	      Każdy nominał ma swój pojemnik				  
+Pojemnik na banknoty:     Każdy nominał banknota ma swój pojemnik
+produkt gotowy:           Np baton, czy puszka napoju
+produkt do przygotowania: Produkt wymagający przygotowania w podgrzewaczu	
 
 Przypadki użycia
 ----------------
