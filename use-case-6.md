@@ -27,7 +27,7 @@ Scenariusz główny (ścieżka podstawowa):
 ---------------------------------------
 
   1. Serwisant dokonuje uwierzytelnienia.
-  2. Automat otwiera się.
+  2. Serwisant otwiera autoamat.
   3. Serwisant przełącza automat w tryb serwisowy.
   4. Automat potwierdza przełączenie się w tryb serwisowy.
   5. Serwisant testuje część mechaniczną automatu.
@@ -67,6 +67,9 @@ Rozszerzenia (ścieżki alternatywne):
  6b. Wystąpił błąd znany dla automatu. Automat przekazuje komunikat z kodem błędu który wystąpił.
  
  6c. Wystąpił błąd nieznany dla automatu. Automat przekazuje komunikat o nieznanym błędzie.
+ 
+ 9b. Automat zamknięty zanim zostanie ukończony pomyślnie serwis.
+	Automat przywraca się do stanu przed zakończeniem serwisu
 
 Wymagania specjalne:
 --------------------

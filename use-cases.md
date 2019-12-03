@@ -67,7 +67,7 @@ Automat wydaje resztę lub pokwitowanie z banku.
 ### Use case 6: Przeprowadzenie przeglądu maszyny
 
 Serwisant dokonuje uwierzytelnienia.
-Automat otwiera się.
+Serwisant otwiera autoamat
 Serwisant przełącza automat w tryb serwisowy.
 Automat potwierdza przełączenie się w stan serwisowy
 Serwisant testuje część mechaniczną automatu.
