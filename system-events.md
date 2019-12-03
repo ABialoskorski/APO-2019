@@ -10,17 +10,11 @@ Use case 1: Uzupełnienie brakujących produktów
 
 Use case 2: Powiadomienie o braku towaru
 -----------------
-
-  - pomyślne wysłanie powiadomienia
-  - niudane wysłanie powiadomienia
-  - uzupełnienie brakującego towaru
+są to use-case'y wewnętrzne
 
 Use case 3: Powiadomienie o usterce
 -----------------
-
-  - pomyślne wysłanie powiadomienia
-  - niudane wysłanie powiadomienia
-  - naprawienie usterki
+są to use-case'y wewnętrzne
 
 Use case 4: Kupno gotowego produktu
 -----------------
@@ -31,13 +25,8 @@ Use case 4: Kupno gotowego produktu
   - przyłożenie karty do terminala
   - włożenie karty do terminala
   - wpisanie kodu pin
-  - pomyślne potwierdzenie zrealizowania transakcji
-  - nieudane potwierdzenie zrealizowania transakcji
-  - rozpoczęcie wydawania produktu
-  - zakończenie wydawania produktu
-  - wydanie reszty
-  - wydanie pokwitowania z banku
-  - wprowadzenie gotówki do przeznaczonego i oznaczonego miejsca
+  - wprowadzenie monety do przeznaczonego i oznaczonego miejsca
+  - wprowadzenie banknotu do przeznaczonego i oznaczonego miejsca
 
 Use case 5: Kupno przygotowywanego produktu
 -----------------
@@ -48,24 +37,14 @@ Use case 5: Kupno przygotowywanego produktu
   - przyłożenie karty do terminala
   - włożenie karty do terminala
   - wpisanie kodu pin
-  - pomyślne potwierdzenie zrealizowania transakcji
-  - nieudane potwierdzenie zrealizowania transakcji
-  - rozpoczęcie wydawania produktu
-  - zakończenie wydawania produktu
-  - wydanie reszty
-  - wydanie pokwitowania z banku
-  - wprowadzenie gotówki do przeznaczonego i oznaczonego miejsca
-  - rozpoczęcie przygotowywania posiłku
-  - zakończenie przygotowywania posiłku
+  - wprowadzenie monety do przeznaczonego i oznaczonego miejsca
+  - wprowadzenie banknotu do przeznaczonego i oznaczonego miejscaiejsca
 
 Use case 6: Przeprowadzenie przeglądu maszyny
 -----------------
 
   - otworzenie automatu
   - przełączenie autommatu w tryb serwisowy
-  - testwoanie części mechanicznej przez serwisanta
   - potwierdzenie w systemie "zaliczenia" danej części mechanicznej
-  - pomyśle zakończenie serwisu
-  - niepomyślne zakończenie serwisu
   - zamknięcie automatu
   - reset przez serwisanta
