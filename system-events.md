@@ -5,22 +5,22 @@ Use case 1: Uzupełnienie brakujących produktów
 -----------------
 
   - otworzenie automatu
-  - przełączenie autommatu w tryb serwisowy
+  - przełączenie automatu w tryb serwisowy
   - zamknięcie automatu
 
 Use case 2: Powiadomienie o braku towaru
 -----------------
-są to use-case'y wewnętrzne
+jest to use-case wewnętrzny
 
 Use case 3: Powiadomienie o usterce
 -----------------
-są to use-case'y wewnętrzne
+jest to use-case wewnętrzny
 
 Use case 4: Kupno gotowego produktu
 -----------------
-
-  - zatwierdzenie produktu przez klienta
+  - wybór produktu przez klienta
   - wpisanie numeru produktu 
+  - zatwierdzenie produktu przez klienta
   - wybór metody płatności przez klienta
   - przyłożenie karty do terminala
   - włożenie karty do terminala
@@ -30,9 +30,9 @@ Use case 4: Kupno gotowego produktu
 
 Use case 5: Kupno przygotowywanego produktu
 -----------------
-
-  - zatwierdzenie produktu przez klienta
+  - wybór produktu przez klienta
   - wpisanie numeru produktu 
+  - zatwierdzenie produktu przez klienta
   - wybór metody płatności przez klienta
   - przyłożenie karty do terminala
   - włożenie karty do terminala
@@ -44,7 +44,7 @@ Use case 6: Przeprowadzenie przeglądu maszyny
 -----------------
 
   - otworzenie automatu
-  - przełączenie autommatu w tryb serwisowy
-  - potwierdzenie w systemie "zaliczenia" danej części mechanicznej
+  - przełączenie automatu w tryb serwisowy
+  - potwierdzenie w systemie "przeglądu" danej części mechanicznej
   - zamknięcie automatu
-  - reset przez serwisanta
+  - reset automatu przez serwisanta poprzez wciśnięcie przycisku reset
