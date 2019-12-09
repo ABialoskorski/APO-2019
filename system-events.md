@@ -18,7 +18,6 @@ jest to use-case wewnętrzny
 
 Use case 4: Kupno gotowego produktu
 -----------------
-  - wybór produktu przez klienta
   - wpisanie numeru produktu 
   - zatwierdzenie produktu przez klienta
   - wybór metody płatności przez klienta
@@ -27,10 +26,10 @@ Use case 4: Kupno gotowego produktu
   - wpisanie kodu pin
   - wprowadzenie monety do przeznaczonego i oznaczonego miejsca
   - wprowadzenie banknotu do przeznaczonego i oznaczonego miejsca
+  - informacja o wydaniu gotowego produktu do podajnika
 
 Use case 5: Kupno przygotowywanego produktu
 -----------------
-  - wybór produktu przez klienta
   - wpisanie numeru produktu 
   - zatwierdzenie produktu przez klienta
   - wybór metody płatności przez klienta
@@ -38,7 +37,8 @@ Use case 5: Kupno przygotowywanego produktu
   - włożenie karty do terminala
   - wpisanie kodu pin
   - wprowadzenie monety do przeznaczonego i oznaczonego miejsca
-  - wprowadzenie banknotu do przeznaczonego i oznaczonego miejscaiejsca
+  - wprowadzenie banknotu do przeznaczonego i oznaczonego miejsca
+  - informacja o wydaniu gotowego produktu do podajnika
 
 Use case 6: Przeprowadzenie przeglądu maszyny
 -----------------
